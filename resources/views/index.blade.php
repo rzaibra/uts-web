@@ -30,7 +30,7 @@
                     </div>
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
-                            <th>ID.</th>
+                            <th>ID</th>
                             <th>Kode Barang</th>
                             <th>Nama Barang</th>
                             <th>Jumlah</th>
@@ -39,66 +39,20 @@
                             <th>Aksi</th>
                         </thead>
                         <tbody>
+                          @foreach($inventories as $inventory)
                             <tr>
-                                <td>1.</td>
-                                <td><a href="{{route('inventory.detail',[1])}}">ASSET-0001</a></td>
-                                <td>Meja Kerja</td>
-                                <td>30</td>
-                                <td>2016-03-20</td>
-                                <td>2016-03-20</td>
+                                <td>{{$inventory->id}}</a></td>
+                                <td>{{$inventory->code}}</a></td>
+                                <td>{{$inventory->name}}</td>
+                                <td>{{$inventory->qty}}</td>
+                                <td>{{$inventory->created_at}}</td>
+                                <td>{{$inventory->updated_at}}</td>
                                 <td>
-                                    <a href="#"><button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</button></a>
-                                    <a href="#"><button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Delete</button></a>
+                                    <a href="/form?name={{$inventory->name}}&code={{$inventory->code}}&qty={{$inventory->qty}}&id={{$inventory->id}}"><button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</button></a>
+                                    <a href="/delete?id={{$inventory->id}}"><button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Delete</button></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td><a href="{{route('inventory.detail',[2])}}">ASSET-0002</a></td>
-                                <td>Kursi Kerja</td>
-                                <td>30</td>
-                                <td>2016-03-20</td>
-                                <td>2016-03-20</td>
-                                <td>
-                                    <a href="#"><button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</button></a>
-                                    <a href="#"><button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Delete</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td><a href="{{route('inventory.detail',[3])}}">ASSET-0003</a></td>
-                                <td>Lemari Buku</td>
-                                <td>5</td>
-                                <td>2016-03-20</td>
-                                <td>2016-03-20</td>
-                                <td>
-                                    <a href="#"><button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</button></a>
-                                    <a href="#"><button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Delete</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4.</td>
-                                <td><a href="{{route('inventory.detail',[4])}}">ASSET-0004</a></td>
-                                <td>Router</td>
-                                <td>5</td>
-                                <td>2016-03-20</td>
-                                <td>2016-03-20</td>
-                                <td>
-                                    <a href="#"><button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</button></a>
-                                    <a href="#"><button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Delete</button></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5.</td>
-                                <td><a href="{{route('inventory.detail',[5])}}">ASSET-0005</a></td>
-                                <td>Sofa Panjang</td>
-                                <td>3</td>
-                                <td>2016-03-20</td>
-                                <td>2016-03-20</td>
-                                <td>
-                                    <a href="#"><button class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</button></a>
-                                    <a href="#"><button class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Delete</button></a>
-                                </td>
-                            </tr>
+                          @endforeach
                         </tbody>
                     </table>
                 </div>

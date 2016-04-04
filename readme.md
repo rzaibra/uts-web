@@ -60,3 +60,7 @@ Catatan:
 
 1. Jangan lupa untuk mendaftarkan akun Github anda di [thread UTS ini](http://elen.nurulfikri.ac.id/mod/forum/discuss.php?d=12).
 2. Jika terdapat masalah dalam pengerjaan UTS, silahkan laporkan di [thread UTS ini](http://elen.nurulfikri.ac.id/mod/forum/discuss.php?d=13)
+
+## Submitted
+
+Herpiko Dwi Aguno / 0110215036

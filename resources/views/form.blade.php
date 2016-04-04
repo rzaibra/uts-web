@@ -22,26 +22,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Buat Inventaris Baru</h2>
-                    <form class="form-horizontal">
+                    @if(!empty($id))
+                      <h2>Sunting</h2>
+                    @else
+                      <h2>Buat Inventaris Baru</h2>
+                    @endif
+                      <form class="form-horizontal" method="POST" action="/form">
                         <div class="form-group">
                             <label for="inputCode" class="col-md-2">Kode Barang</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" id="inputCode" name="code" placeholder="">
+                                <input type="text" class="form-control" id="inputCode" name="code" placeholder="" value="{{$code}}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputName" class="col-md-2">Nama Barang</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" id="inputName" name="name" placeholder="">
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="" value="{{$name}}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputQty" class="col-md-2">Jumlah</label>
                             <div class="col-md-10">
-                                <input type="number" class="form-control" id="inputQty" name="qty" placeholder="">
+                                <input type="number" class="form-control" id="inputQty" name="qty" placeholder="" value="{{$qty}}">
                             </div>
                         </div>
+                        @if(!empty($id))
+                          <input type="hidden" type="number" name="id" value="{{$id}}">
+                        @endif
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
