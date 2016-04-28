@@ -41,8 +41,8 @@
                         <tbody>
                           @foreach($inventories as $inventory)
                             <tr>
-                                <td>{{$inventory->id}}</a></td>
-                                <td>{{$inventory->code}}</a></td>
+                                <td>{{$inventory->id}}</td>
+                                <td><a href="{{route('inventory.detail',[$inventory->id])}}">{{$inventory->code}}</a></td>
                                 <td>{{$inventory->name}}</td>
                                 <td>{{$inventory->qty}}</td>
                                 <td>{{$inventory->created_at}}</td>

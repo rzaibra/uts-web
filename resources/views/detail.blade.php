@@ -27,32 +27,32 @@
                         <tr>
                             <td>ID</td>
                             <td>:</td>
-                            <td></td>
+                            <td>{{$inventory->id}}</td>
                         </tr>
                         <tr>
                             <td>Kode Barang</td>
                             <td>:</td>
-                            <td></td>
+                            <td>{{$inventory->code}}</td>
                         </tr>
                         <tr>
                             <td>Nama Barang</td>
                             <td>:</td>
-                            <td></td>
+                            <td>{{$inventory->name}}</td>
                         </tr>
                         <tr>
                             <td>Jumlah</td>
                             <td>:</td>
-                            <td></td>
+                            <td>{{$inventory->qty}}</td>
                         </tr>
                         <tr>
                             <td>Tgl. Input</td>
                             <td>:</td>
-                            <td></td>
+                            <td>{{$inventory->created_at}}</td>
                         </tr>
                         <tr>
                             <td>Tgl. Update</td>
                             <td>:</td>
-                            <td></td>
+                            <td>{{$inventory->updated_at}}</td>
                         </tr>
                     </table>
                     <a href="{{route('inventory.index')}}"><button type="button" class="btn btn-primary">Kembali</button></a>

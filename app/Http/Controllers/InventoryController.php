@@ -68,12 +68,13 @@ class InventoryController extends Controller
 
     // Unused
 
-    /*
+    
     public function detail(Request $request, $id)
     {
-        return response()->view('detail');
+   $inventory = $this->inventory->find($id); 
+   return response()->view('detail', ['inventory' => $inventory]);
     }
-
+  /*
     public function create(Request $request) {
     }
      */
